@@ -45,9 +45,22 @@ class TaskService {
   }
 
 // Helper method to validate ID parameters
-  validateId(id) {
-    const numericId = parseInt(id);
-    return !isNaN(numericId) && numericId > 0;
+validateId(id) {
+    // Check for undefined, null, or empty values first
+    if (id === undefined || id === null || id === '') {
+      return false;
+    }
+    
+    // Convert to string to handle numeric inputs safely
+    const idString = String(id).trim();
+    
+    // Check if it's a valid number string
+    if (idString === '' || isNaN(idString)) {
+      return false;
+    }
+    
+    const numericId = parseInt(idString, 10);
+    return !isNaN(numericId) && numericId > 0 && Number.isInteger(numericId);
   }
 
   async getById(id) {

@@ -44,8 +44,21 @@ class TaskService {
     }
   }
 
+// Helper method to validate ID parameters
+  validateId(id) {
+    const numericId = parseInt(id);
+    return !isNaN(numericId) && numericId > 0;
+  }
+
   async getById(id) {
     try {
+      // Validate ID parameter before making API call
+      if (!this.validateId(id)) {
+        console.error(`Invalid ID provided to getById: ${id}`);
+        toast.error('Invalid task ID provided');
+        return null;
+      }
+
       const params = {
         fields: [
           { field: { Name: "Name" } },
@@ -117,8 +130,15 @@ class TaskService {
     }
   }
 
-  async update(id, updateData) {
+async update(id, updateData) {
     try {
+      // Validate ID parameter before making API call
+      if (!this.validateId(id)) {
+        console.error(`Invalid ID provided to update: ${id}`);
+        toast.error('Invalid task ID provided for update');
+        return null;
+      }
+
       const params = {
         records: [{
           Id: parseInt(id),
@@ -169,8 +189,15 @@ class TaskService {
     }
   }
 
-  async delete(id) {
+async delete(id) {
     try {
+      // Validate ID parameter before making API call
+      if (!this.validateId(id)) {
+        console.error(`Invalid ID provided to delete: ${id}`);
+        toast.error('Invalid task ID provided for deletion');
+        return false;
+      }
+
       const params = {
         RecordIds: [parseInt(id)]
       };

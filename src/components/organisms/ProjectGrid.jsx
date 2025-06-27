@@ -23,12 +23,28 @@ const ProjectGrid = () => {
     '#2196F3', '#9C27B0', '#4CAF50', '#FF5722', '#607D8B'
   ];
   
-  const loadProjects = async () => {
+const loadProjects = async () => {
     try {
       setLoading(true);
       setError('');
       const data = await projectService.getAll();
-      setProjects(data);
+      // Transform API data to component expected format
+      const transformedData = data.map(project => ({
+        ...project,
+        id: project.Id, // Map database Id to lowercase id
+        linkedItems: (() => {
+          try {
+            return typeof project.linked_items === 'string' 
+              ? JSON.parse(project.linked_items) 
+              : Array.isArray(project.linked_items) 
+                ? project.linked_items 
+                : [];
+          } catch {
+            return [];
+          }
+        })()
+      }));
+      setProjects(transformedData);
     } catch (err) {
       setError('Failed to load projects. Please try again.');
     } finally {
@@ -44,14 +60,20 @@ const ProjectGrid = () => {
     e.preventDefault();
     if (!newProject.name.trim()) return;
     
-    try {
+try {
       const project = await projectService.create({
         name: newProject.name,
         color: newProject.color,
         linkedItems: [],
         progress: 0
       });
-      setProjects(prev => [project, ...prev]);
+      // Transform created project to expected format
+      const transformedProject = {
+        ...project,
+        id: project.Id,
+        linkedItems: []
+      };
+      setProjects(prev => [transformedProject, ...prev]);
       setNewProject({ name: '', color: '#2E3192' });
       setShowAddForm(false);
       toast.success('Project created successfully');
@@ -60,7 +82,7 @@ const ProjectGrid = () => {
     }
   };
   
-  const handleDeleteProject = async (projectId) => {
+const handleDeleteProject = async (projectId) => {
     try {
       await projectService.delete(projectId);
       setProjects(prev => prev.filter(p => p.id !== projectId));

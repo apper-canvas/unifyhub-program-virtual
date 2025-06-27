@@ -1,8 +1,14 @@
+import { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import SearchBar from '@/components/molecules/SearchBar';
 import ApperIcon from '@/components/ApperIcon';
 import Button from '@/components/atoms/Button';
+import { AuthContext } from '@/App';
 
 const TopBar = () => {
+  const { logout } = useContext(AuthContext);
+  const { user, isAuthenticated } = useSelector((state) => state.user);
+  
   const handleSearch = (query) => {
     console.log('Searching for:', query);
   };
@@ -28,6 +34,23 @@ const TopBar = () => {
               <span className="text-xs text-white font-bold">3</span>
             </span>
           </Button>
+          
+          {/* User Menu with Logout */}
+          {isAuthenticated && (
+            <div className="flex items-center space-x-2">
+              <span className="text-sm text-gray-600">
+                {user?.firstName || user?.name || 'User'}
+              </span>
+              <Button 
+                variant="ghost" 
+                onClick={logout}
+                className="flex items-center space-x-1 text-gray-600 hover:text-error"
+              >
+                <ApperIcon name="LogOut" size={16} />
+                <span>Logout</span>
+              </Button>
+            </div>
+          )}
           
           {/* Quick Actions */}
           <Button variant="accent" className="flex items-center space-x-2">

@@ -146,7 +146,7 @@ validateId(id) {
 async update(id, updateData) {
     try {
       // Validate ID parameter before making API call
-      if (!this.validateId(id)) {
+      if (id === undefined || id === null || isNaN(parseInt(id)) || parseInt(id) <= 0) {
         console.error(`Invalid ID provided to update: ${id}`);
         toast.error('Invalid task ID provided for update');
         return null;

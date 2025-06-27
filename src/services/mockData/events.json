@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "service": "google",
+    "title": "Team Standup",
+    "start": "2024-01-16T09:00:00Z",
+    "end": "2024-01-16T09:30:00Z",
+    "attendees": ["john@company.com", "sarah@company.com", "mike@company.com"],
+    "location": "Conference Room A",
+    "projectId": "1"
+  },
+  {
+    "id": "2",
+    "service": "outlook-cal",
+    "title": "Client Presentation",
+    "start": "2024-01-16T14:00:00Z",
+    "end": "2024-01-16T15:30:00Z",
+    "attendees": ["client@startup.com", "sarah@company.com"],
+    "location": "Zoom Meeting",
+    "projectId": "2"
+  },
+  {
+    "id": "3",
+    "service": "google",
+    "title": "Design Review",
+    "start": "2024-01-17T10:00:00Z",
+    "end": "2024-01-17T11:00:00Z",
+    "attendees": ["designer@company.com", "john@company.com"],
+    "location": "Design Studio",
+    "projectId": "1"
+  },
+  {
+    "id": "4",
+    "service": "apple",
+    "title": "Lunch with Marketing Team",
+    "start": "2024-01-17T12:00:00Z",
+    "end": "2024-01-17T13:00:00Z",
+    "attendees": ["marketing@company.com"],
+    "location": "Local Restaurant",
+    "projectId": null
+  },
+  {
+    "id": "5",
+    "service": "google",
+    "title": "Sprint Planning",
+    "start": "2024-01-18T09:00:00Z",
+    "end": "2024-01-18T11:00:00Z",
+    "attendees": ["dev-team@company.com"],
+    "location": "Conference Room B",
+    "projectId": "3"
+  },
+  {
+    "id": "6",
+    "service": "outlook-cal",
+    "title": "Quarterly Business Review",
+    "start": "2024-01-19T13:00:00Z",
+    "end": "2024-01-19T16:00:00Z",
+    "attendees": ["executives@company.com"],
+    "location": "Boardroom",
+    "projectId": null
+  },
+  {
+    "id": "7",
+    "service": "google",
+    "title": "Code Review Session",
+    "start": "2024-01-15T15:00:00Z",
+    "end": "2024-01-15T16:00:00Z",
+    "attendees": ["dev-team@company.com"],
+    "location": "Online",
+    "projectId": "3"
+  }
+]

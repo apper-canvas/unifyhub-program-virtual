@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "service": "gmail",
+    "from": "sarah.johnson@company.com",
+    "subject": "Q4 Budget Review Meeting",
+    "preview": "Hi team, I'd like to schedule our Q4 budget review meeting for next week. Please let me know your availability...",
+    "timestamp": "2024-01-15T10:30:00Z",
+    "read": false,
+    "labels": ["work", "meeting"]
+  },
+  {
+    "id": "2",
+    "service": "outlook",
+    "from": "marketing@newsletter.com",
+    "subject": "Weekly Marketing Insights",
+    "preview": "This week's top marketing trends and insights from industry leaders. Don't miss out on the latest...",
+    "timestamp": "2024-01-15T09:15:00Z",
+    "read": true,
+    "labels": ["newsletter", "marketing"]
+  },
+  {
+    "id": "3",
+    "service": "slack",
+    "from": "#development",
+    "subject": "Code review needed for PR #245",
+    "preview": "Hey team, could someone please review the latest pull request? It includes the new authentication flow...",
+    "timestamp": "2024-01-15T08:45:00Z",
+    "read": false,
+    "labels": ["development", "urgent"]
+  },
+  {
+    "id": "4",
+    "service": "discord",
+    "from": "DevCommunity",
+    "subject": "New React 18 features discussion",
+    "preview": "Join the discussion about the latest React 18 features and how they can improve your development workflow...",
+    "timestamp": "2024-01-15T07:20:00Z",
+    "read": true,
+    "labels": ["react", "discussion"]
+  },
+  {
+    "id": "5",
+    "service": "gmail",
+    "from": "client@startup.com",
+    "subject": "Project Timeline Update",
+    "preview": "I wanted to provide you with an update on our project timeline. We've made significant progress...",
+    "timestamp": "2024-01-14T16:30:00Z",
+    "read": false,
+    "labels": ["client", "project"]
+  },
+  {
+    "id": "6",
+    "service": "outlook",
+    "from": "support@software.com",
+    "subject": "Your license expires in 7 days",
+    "preview": "This is a reminder that your software license will expire in 7 days. Please renew to continue...",
+    "timestamp": "2024-01-14T14:15:00Z",
+    "read": true,
+    "labels": ["license", "reminder"]
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "serviceId": "gmail",
+    "status": "connected",
+    "lastSync": "2024-01-15T10:45:00Z",
+    "settings": {
+      "syncFrequency": "5min",
+      "autoArchive": true
+    }
+  },
+  {
+    "id": "2",
+    "serviceId": "slack",
+    "status": "connected",
+    "lastSync": "2024-01-15T10:30:00Z",
+    "settings": {
+      "channels": ["#development", "#general"],
+      "notifications": true
+    }
+  },
+  {
+    "id": "3",
+    "serviceId": "google",
+    "status": "connected",
+    "lastSync": "2024-01-15T10:00:00Z",
+    "settings": {
+      "calendars": ["primary", "work"],
+      "conflictDetection": true
+    }
+  },
+  {
+    "id": "4",
+    "serviceId": "asana",
+    "status": "connected",
+    "lastSync": "2024-01-15T09:15:00Z",
+    "settings": {
+      "projects": ["Website Redesign", "Mobile App"],
+      "autoSync": true
+    }
+  },
+  {
+    "id": "5",
+    "serviceId": "todoist",
+    "status": "error",
+    "lastSync": "2024-01-14T18:30:00Z",
+    "settings": {
+      "projects": ["Personal", "Work"],
+      "labels": true
+    }
+  },
+  {
+    "id": "6",
+    "serviceId": "outlook",
+    "status": "connected",
+    "lastSync": "2024-01-15T08:45:00Z",
+    "settings": {
+      "folders": ["Inbox", "Important"],
+      "rules": true
+    }
+  }
+]

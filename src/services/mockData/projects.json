@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Website Redesign",
+    "color": "#2E3192",
+    "linkedItems": [
+      {"type": "task", "id": "1", "title": "Update user interface designs"},
+      {"type": "task", "id": "5", "title": "Update project timeline"},
+      {"type": "event", "id": "3", "title": "Design Review"}
+    ],
+    "created": "2023-12-01T10:00:00Z",
+    "progress": 75
+  },
+  {
+    "id": "2",
+    "name": "Mobile App Launch",
+    "color": "#00D4AA",
+    "linkedItems": [
+      {"type": "task", "id": "2", "title": "Prepare client presentation slides"},
+      {"type": "event", "id": "2", "title": "Client Presentation"},
+      {"type": "task", "id": "8", "title": "Market research analysis"}
+    ],
+    "created": "2023-11-15T14:30:00Z",
+    "progress": 45
+  },
+  {
+    "id": "3",
+    "name": "Q4 Planning",
+    "color": "#FF9F00",
+    "linkedItems": [
+      {"type": "task", "id": "3", "title": "Write API documentation"},
+      {"type": "task", "id": "4", "title": "Code review for authentication module"},
+      {"type": "event", "id": "5", "title": "Sprint Planning"}
+    ],
+    "created": "2023-10-01T09:00:00Z",
+    "progress": 90
+  },
+  {
+    "id": "4",
+    "name": "Team Expansion",
+    "color": "#2196F3",
+    "linkedItems": [
+      {"type": "task", "id": "6", "title": "Setup development environment"}
+    ],
+    "created": "2024-01-10T11:00:00Z",
+    "progress": 20
+  },
+  {
+    "id": "5",
+    "name": "Documentation Update",
+    "color": "#9C27B0",
+    "linkedItems": [
+      {"type": "task", "id": "7", "title": "Design system documentation"}
+    ],
+    "created": "2024-01-05T16:00:00Z",
+    "progress": 30
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "name": "Auto-archive newsletters",
+    "conditions": [
+      {"field": "sender", "operator": "contains", "value": "newsletter"}
+    ],
+    "actions": [
+      {"type": "archive", "value": ""}
+    ],
+    "enabled": true,
+    "lastRun": "2024-01-15T09:30:00Z"
+  },
+  {
+    "id": "2",
+    "name": "High priority client emails",
+    "conditions": [
+      {"field": "sender", "operator": "contains", "value": "client"},
+      {"field": "subject", "operator": "contains", "value": "urgent"}
+    ],
+    "actions": [
+      {"type": "add_label", "value": "urgent"},
+      {"type": "send_notification", "value": "New urgent client email"}
+    ],
+    "enabled": true,
+    "lastRun": "2024-01-14T16:45:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Move development tasks to project",
+    "conditions": [
+      {"field": "service", "operator": "equals", "value": "slack"},
+      {"field": "subject", "operator": "contains", "value": "development"}
+    ],
+    "actions": [
+      {"type": "move_to_project", "value": "Q4 Planning"}
+    ],
+    "enabled": false,
+    "lastRun": "2024-01-12T14:20:00Z"
+  },
+  {
+    "id": "4",
+    "name": "Auto-complete routine tasks",
+    "conditions": [
+      {"field": "subject", "operator": "contains", "value": "daily standup"}
+    ],
+    "actions": [
+      {"type": "mark_as_read", "value": ""},
+      {"type": "add_label", "value": "routine"}
+    ],
+    "enabled": true,
+    "lastRun": "2024-01-15T10:00:00Z"
+  }
+]
